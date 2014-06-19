@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnCanRRtResource1.Text" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="btnCanRRtResource1.ToolTip" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="btnSaveRRtResource1.Text" xml:space="preserve">
+    <value>Spara</value>
+  </data>
+  <data name="btnSaveRRtResource1.ToolTip" xml:space="preserve">
+    <value>Spara</value>
+  </data>
 </root>

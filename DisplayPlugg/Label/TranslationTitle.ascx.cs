@@ -1,4 +1,5 @@
-﻿using DotNetNuke.Services.Localization;
+﻿using DotNetNuke.Entities.Modules;
+using DotNetNuke.Services.Localization;
 using Plugghest.Base2;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace Plugghest.Modules.UserControl.DisplayPlugg.Label
 {
-    public partial class TranslationTitle : UserControlModuleBase
+    public partial class TranslationTitle : PortalModuleBase
     {
         #region Properties
         /// <summary>
@@ -85,12 +86,12 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.Label
 
         protected void btnImproveGoogleText_Click(object sender, EventArgs e)
         {
-            Response.Redirect(DotNetNuke.Common.Globals.NavigateURL(TabId, "", new string[] { "edit=2","trans="+this.ComponentID , "language=" + this.CurrentLanguage }));
+            Response.Redirect(DotNetNuke.Common.Globals.NavigateURL(TabId, "", new string[] { "edit=2", "trans=" + this.ComponentID, "language=" + this.CurrentLanguage }));
         }
 
         protected void btnImproveHumanText_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect(DotNetNuke.Common.Globals.NavigateURL(TabId, "", new string[] { "edit=2", "trans=" + this.ComponentID, "language=" + this.CurrentLanguage }));
         }
     }
 }

@@ -13,6 +13,15 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.RichText {
     public partial class Edit2 {
         
         /// <summary>
+        /// hdnrichtext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnrichtext;
+        
+        /// <summary>
         /// pnlRichTextEdit2 control.
         /// </summary>
         /// <remarks>
@@ -20,5 +29,23 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.RichText {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlRichTextEdit2;
+        
+        /// <summary>
+        /// btnSaveRt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveRt;
+        
+        /// <summary>
+        /// btnCanRt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCanRt;
     }
 }

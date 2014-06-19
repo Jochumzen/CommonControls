@@ -5,13 +5,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Plugghest.Modules.UserControl.Utility;
+using DotNetNuke.Entities.Modules;
 
 namespace Plugghest.Modules.UserControl.DisplayPlugg.YouTube
 {
     /// <summary>
     /// For Displaying YouTube Components.
     /// </summary>
-    public partial class Display : System.Web.UI.UserControl
+    public partial class Display : PortalModuleBase
     {
         #region Properties
         public int YTComponentId

@@ -138,4 +138,16 @@
   <data name="richText" xml:space="preserve">
     <value>RichText</value>
   </data>
+  <data name="btnCanRtResource1.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btnCanRtResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSaveRtResource1.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btnSaveRtResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
 </root>

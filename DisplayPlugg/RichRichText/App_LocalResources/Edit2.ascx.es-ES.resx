@@ -141,4 +141,16 @@
   <data name="RichRichText" xml:space="preserve">
     <value>ricoricoTexto</value>
   </data>
+  <data name="btnCanRRtResource1.Text" xml:space="preserve">
+    <value>cancelar</value>
+  </data>
+  <data name="btnCanRRtResource1.ToolTip" xml:space="preserve">
+    <value>cancelar</value>
+  </data>
+  <data name="btnSaveRRtResource1.Text" xml:space="preserve">
+    <value>guardar</value>
+  </data>
+  <data name="btnSaveRRtResource1.ToolTip" xml:space="preserve">
+    <value>guardar</value>
+  </data>
 </root>

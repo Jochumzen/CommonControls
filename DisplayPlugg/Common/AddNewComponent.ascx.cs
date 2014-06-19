@@ -12,7 +12,7 @@ using System.Web.UI.WebControls;
 
 namespace Plugghest.Modules.UserControl.DisplayPlugg.Common
 {
-    public partial class AddNewComponent : UserControlModuleBase
+    public partial class AddNewComponent : PortalModuleBase
     {
         public int Order { get; set; }
 

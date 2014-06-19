@@ -1,4 +1,5 @@
-﻿using DotNetNuke.Services.Localization;
+﻿using DotNetNuke.Entities.Modules;
+using DotNetNuke.Services.Localization;
 using Plugghest.Base2;
 using System;
 using System.Collections.Generic;
@@ -9,40 +10,25 @@ using System.Web.UI.WebControls;
 
 namespace Plugghest.Modules.UserControl.DisplayPlugg.RichText
 {
-    public partial class Edit2 : UserControlModuleBase
+    public partial class Edit2 : PortalModuleBase
     {
         #region Properties
-        private ECultureCodeStatus _CultureCodeStatus;
-
-        public ECultureCodeStatus CultureCodeStatus
-        {
-            get { return _CultureCodeStatus; }
-            set
-            {
-                _CultureCodeStatus = value;
-                var flag = _CultureCodeStatus == ECultureCodeStatus.GoogleTranslated ? AddGooleTranslateButton() : CreateBtnImproveHumGoogleTrans();
-            }
-        }
-
-        private int _order;
+        /// <summary>
+        /// Order of component.
+        /// </summary>
+        private int _Order;
         public int Order
         {
-            get { return _order; }
+            get { return _Order; }
             set
             {
-                _order = value;
-                pnlRichTextEdit2.Controls.Add(new LiteralControl(string.Format("<div><div id=RichText" + this.Order + " class='Main'>" + this.ComponentText + " " + this.Order + " : " + this.RichText + " " + value + "</div></div> ")));
+                _Order = value;
             }
         }
 
-        private string RichText
-        {
-            get
-            {
-                var lanText = Localization.GetString("RichText", this.LocalResourceFile);
-                return !string.IsNullOrEmpty(lanText) ? lanText : "RichText";
-            }
-        }
+        /// <summary>
+        /// ComponentText Based on Globalization.
+        /// </summary>
         private string ComponentText
         {
             get
@@ -51,30 +37,10 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.RichText
                 return !string.IsNullOrEmpty(lanText) ? lanText : "Component";
             }
         }
-        private string ImpGooleTranslate
-        {
-            get
-            {
-                var lanText = Localization.GetString("ImpGooleTranslate", this.LocalResourceFile);
-                return !string.IsNullOrEmpty(lanText) ? lanText : "Improve google Translation";
-            }
-        }
-        private string GoogleTransOk
-        {
-            get
-            {
-                var lanText = Localization.GetString("GoogleTransOk", this.LocalResourceFile);
-                return !string.IsNullOrEmpty(lanText) ? lanText : "Google translation is OK";
-            }
-        }
-        private string ImpHumanTxt
-        {
-            get
-            {
-                var lanText = Localization.GetString("ImpHumanTxt", this.LocalResourceFile);
-                return !string.IsNullOrEmpty(lanText) ? lanText : "Improve Human Translation Text";
-            }
-        }
+        public int UserID { get; set; }
+
+        public EComponentType ComponentType { get; set; }
+        public int ComponentID { get; set; }
 
         public int PluggID
         {
@@ -88,84 +54,41 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.RichText
         {
             get { return new Plugghest.Base2.PluggContainer(this.CurrentLanguage, this.PluggID); }
         }
-        public int ComponentID { get; set; }
-
-        private PHText PHText
+        public int TabID { get; set; }
+        public int EditCase { get; set; }
+        public PHText PHText
         {
             get
             {
                 var _PHText = new BaseHandler().GetCurrentVersionText(this.CurrentLanguage, this.ComponentID, ETextItemType.PluggComponentRichText);
                 _PHText.Text = _PHText.Text == "(No text)" ? "(currently no text)" : _PHText.Text;
-                this.CultureCodeStatus = _PHText.CultureCodeStatus;
                 return _PHText;
             }
         }
         public Page Parent_Page { get; set; }
+
         #endregion
-
-        private bool AddGooleTranslateButton()
-        {
-            try
-            {
-                Button btnImpHumTras = new Button();
-                btnImpHumTras.CssClass = "googletrans";
-                btnImpHumTras.ID = "btnrtIGT" + this.Order;
-                btnImpHumTras.Text = this.ImpGooleTranslate;
-                btnImpHumTras.Click += (s, e) => { ImpGoogleTrans(); };
-                pnlRichTextEdit2.Controls.Add(btnImpHumTras);
-                CreateBtnGoogleT();
-
-            }
-            catch
-            {
-                return false;
-            }
-            return true;
-        }
-
-        private void CreateBtnGoogleT()
-        {
-            Button btnGT = new Button();
-            btnGT.CssClass = "googleTrasok";
-            btnGT.ID = "btnGTText" + this.Order;
-            btnGT.Text = this.GoogleTransOk;
-            btnGT.Click += (s, e) => { GoogleTranText(this.PHText); };
-            pnlRichTextEdit2.Controls.Add(btnGT);
-        }
-
-        private void GoogleTranText(PHText txt)
-        {
-            BaseHandler bh = new BaseHandler();
-            txt.CultureCodeStatus = ECultureCodeStatus.HumanTranslated;
-            bh.SavePhText(txt);
-        }
-
-        private bool CreateBtnImproveHumGoogleTrans()
-        {
-            try
-            {
-                Button btnImpHumTras = new Button();
-                btnImpHumTras.CssClass = "btnhumantrans";
-                btnImpHumTras.ID = "btnlbl" + this.Order;
-                btnImpHumTras.Text = this.ImpHumanTxt;
-                btnImpHumTras.Click += (s, e) => { ImpGoogleTrans(); };
-                pnlRichTextEdit2.Controls.Add(btnImpHumTras);
-            }
-            catch
-            {
-                return false;
-            }
-            return true;
-        }
-
-        private void ImpGoogleTrans()
-        {
-            string text = this.PHText.Text;
-        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            hdnrichtext.Value = this.PHText.Text;
+        }
 
+        protected void btnSaveRt_Click(object sender, EventArgs e)
+        {
+            BaseHandler bh = new BaseHandler();
+            PHText phText = this.PHText;
+
+            phText.Text = hdnrichtext.Value;
+            phText.ModifiedByUserId = this.UserID;
+            phText.CultureCodeStatus = ECultureCodeStatus.HumanTranslated;
+            bh.SavePhText(phText);
+            Response.Redirect(DotNetNuke.Common.Globals.NavigateURL(this.TabID, "", new string[] { "edit=1", "language=" + this.CurrentLanguage }));
+        }
+
+        protected void btnCanRt_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(DotNetNuke.Common.Globals.NavigateURL(this.TabID, "", new string[] { "edit=1", "language=" + this.CurrentLanguage }));
         }
     }
 }

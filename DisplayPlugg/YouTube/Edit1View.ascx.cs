@@ -1,4 +1,5 @@
-﻿using Plugghest.Base2;
+﻿using DotNetNuke.Entities.Modules;
+using Plugghest.Base2;
 using Plugghest.Modules.UserControl.Utility;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.YouTube
     /// <summary>
     /// 
     /// </summary>
-    public partial class Edit1View : System.Web.UI.UserControl
+    public partial class Edit1View : PortalModuleBase
     {
         #region Properties
         public int YoutubeComID

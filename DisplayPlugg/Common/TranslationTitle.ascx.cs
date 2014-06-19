@@ -1,4 +1,5 @@
-﻿using DotNetNuke.Services.Localization;
+﻿using DotNetNuke.Entities.Modules;
+using DotNetNuke.Services.Localization;
 using Plugghest.Base2;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace Plugghest.Modules.UserControl.DisplayPlugg.Common
 {
-    public partial class TranslationTitle : UserControlModuleBase
+    public partial class TranslationTitle : PortalModuleBase
     {
         #region Properties
         /// <summary>

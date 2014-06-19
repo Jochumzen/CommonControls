@@ -63,8 +63,8 @@
 <asp:HiddenField ID="ytAuthor" runat="server" />
 <asp:HiddenField ID="ytYouTubeCreatedOn" runat="server" />
 <asp:HiddenField ID="ytYouTubeComment" runat="server" />
-<asp:Panel runat="server" ID="pnlYoutube" meta:resourcekey="pnlYoutubeResource1" >
-    <asp:TextBox ID="txtYouTube" runat="server" meta:resourcekey="txtYouTubeResource1" />
+<asp:Panel runat="server" ID="pnlYoutube"  resourcekey="pnlYoutubeResource1" >
+    <asp:TextBox ID="txtYouTube" runat="server"  resourcekey="txtYouTubeResource1" />
 
     <input type="button" id="btnGetYoutubeVideo" value="Get Video" onclick="CheckURL(this);" />
     <h2   class="title"></h2>

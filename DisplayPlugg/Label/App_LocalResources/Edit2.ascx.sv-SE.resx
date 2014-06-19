@@ -138,4 +138,16 @@
   <data name="pnlLabelEdit2Resource1.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="btnLabelSaveResource1.Text" xml:space="preserve">
+    <value>Spara</value>
+  </data>
+  <data name="btnLabelSaveResource1.ToolTip" xml:space="preserve">
+    <value>Spara</value>
+  </data>
+  <data name="CancelResource1.Text" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="CancelResource1.ToolTip" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
 </root>

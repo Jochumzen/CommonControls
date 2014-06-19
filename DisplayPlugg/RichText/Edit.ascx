@@ -9,7 +9,7 @@ function getRichtext() {
       }
     </script>
 <asp:HiddenField ID="hdnrichtext" runat="server" />
-<asp:Panel ID="richtextbox" runat="server" meta:resourcekey="richtextboxResource1" >
+<asp:Panel ID="richtextbox" runat="server"  resourcekey="richtextboxResource1" >
     <div class='container'>
         <div class='hero-unit'>
 
@@ -56,6 +56,6 @@ function getRichtext() {
 
 
     </div>
-    <asp:Button ID="btnSaveRt" OnClientClick="getRichtext()" runat="server" Text="Save" OnClick="btnSaveRt_Click" meta:resourcekey="btnSaveRtResource1" />
-    <asp:Button ID="btnCanRt" runat="server" Text="Cancel" OnClick="btnCanRt_Click" Height="27px" meta:resourcekey="btnCanRtResource1" />
+    <asp:Button ID="btnSaveRt" OnClientClick="getRichtext()" runat="server" Text="Save" OnClick="btnSaveRt_Click"  resourcekey="btnSaveRtResource1" />
+    <asp:Button ID="btnCanRt" runat="server" Text="Cancel" OnClick="btnCanRt_Click" Height="27px"  resourcekey="btnCanRtResource1" />
 </asp:Panel>

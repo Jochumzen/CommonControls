@@ -1,4 +1,5 @@
-﻿using DotNetNuke.Services.Localization;
+﻿using DotNetNuke.Entities.Modules;
+using DotNetNuke.Services.Localization;
 using Plugghest.Base2;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace Plugghest.Modules.UserControl.DisplayPlugg.RichText
 {
-    public partial class Edit : UserControlModuleBase
+    public partial class Edit : PortalModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -1,4 +1,5 @@
 ﻿using DotNetNuke.Common.Utilities;
+using DotNetNuke.Entities.Modules;
 using DotNetNuke.UI.Utilities;
 using Plugghest.Base2;
 using System;
@@ -14,7 +15,7 @@ using System.Web.UI.WebControls;
 
 namespace Plugghest.Modules.UserControl.DisplayPlugg.Common
 {
-    public partial class OrderTitle : System.Web.UI.UserControl
+    public partial class OrderTitle : PortalModuleBase
     {
         #region Properties
         /// <summary>
