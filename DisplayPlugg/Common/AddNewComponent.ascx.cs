@@ -19,7 +19,7 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.Common
         private string AddNewAfter
         {
             get {
-                var lanText = Localization.GetString("AddNewAfter", this.LocalResourceFile + ".ascx." + this.CurrentLanguage + ".resx");
+                var lanText = Localization.GetString("AddNewAfter", this.LocalResourceFile);
                 return string.Format("{0} {1}",!string.IsNullOrEmpty(lanText)?lanText: "Add new component After", this.Order); 
             }
         }
@@ -28,7 +28,7 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.Common
         {
             get
             {
-                var lanText = Localization.GetString("AddNewBetween", this.LocalResourceFile + ".ascx." + this.CurrentLanguage + ".resx");
+                var lanText = Localization.GetString("AddNewBetween", this.LocalResourceFile);
                 return string.Format("{0} {1} and {2}", !string.IsNullOrEmpty(lanText) ? lanText : "Add new component Between", this.Order, this.Order + 1);
             }
         }

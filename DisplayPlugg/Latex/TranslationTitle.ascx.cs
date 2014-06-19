@@ -33,7 +33,7 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.Latex
         {
             get
             {
-                var lanText = Localization.GetString("ComponentText", this.LocalResourceFile + ".ascx." + this.CurrentLanguage + ".resx");
+                var lanText = Localization.GetString("ComponentText", this.LocalResourceFile);
                 return !string.IsNullOrEmpty(lanText) ? lanText : "Component";
             }
         }

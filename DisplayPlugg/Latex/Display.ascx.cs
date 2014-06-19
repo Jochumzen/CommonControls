@@ -63,7 +63,7 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.Latex
         {
             get
             {
-                var lanText = Localization.GetString("LatexText", this.LocalResourceFile + ".ascx." + this.CurrentLanguage + ".resx");
+                var lanText = Localization.GetString("LatexText", this.LocalResourceFile);
                 return !string.IsNullOrEmpty(lanText) ? lanText : "Latex";
             }
         }

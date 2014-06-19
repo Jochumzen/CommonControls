@@ -38,7 +38,7 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.RichRichText
         {
             get
             {
-                var lanText = Localization.GetString("RichRichText", this.LocalResourceFile + ".ascx." + this.CurrentLanguage + ".resx");
+                var lanText = Localization.GetString("RichRichText", this.LocalResourceFile);
                 return !string.IsNullOrEmpty(lanText) ? lanText : "RichRichText";
             }
         }
@@ -46,7 +46,7 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.RichRichText
         {
             get
             {
-                var lanText = Localization.GetString("ComponentText", this.LocalResourceFile + ".ascx." + this.CurrentLanguage + ".resx");
+                var lanText = Localization.GetString("ComponentText", this.LocalResourceFile);
                 return !string.IsNullOrEmpty(lanText) ? lanText : "Component";
             }
         }
@@ -54,7 +54,7 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.RichRichText
         {
             get
             {
-                var lanText = Localization.GetString("ImpGooleTranslate", this.LocalResourceFile + ".ascx." + this.CurrentLanguage + ".resx");
+                var lanText = Localization.GetString("ImpGooleTranslate", this.LocalResourceFile);
                 return !string.IsNullOrEmpty(lanText) ? lanText : "Improve google Translation";
             }
         }
@@ -62,7 +62,7 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.RichRichText
         {
             get
             {
-                var lanText = Localization.GetString("GoogleTransOk", this.LocalResourceFile + ".ascx." + this.CurrentLanguage + ".resx");
+                var lanText = Localization.GetString("GoogleTransOk", this.LocalResourceFile);
                 return !string.IsNullOrEmpty(lanText) ? lanText : "Google translation is OK";
             }
         }
@@ -70,7 +70,7 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.RichRichText
         {
             get
             {
-                var lanText = Localization.GetString("ImpHumanTxt", this.LocalResourceFile + ".ascx." + this.CurrentLanguage + ".resx");
+                var lanText = Localization.GetString("ImpHumanTxt", this.LocalResourceFile);
                 return !string.IsNullOrEmpty(lanText) ? lanText : "Improve Human Translation Text";
             }
         }

@@ -56,7 +56,7 @@ namespace Plugghest.Modules.UserControl.DisplayPlugg.RichText
         public string RichText
         {
             get {
-                var lanText = Localization.GetString("RichText", this.LocalResourceFile + ".ascx." + this.CurrentLanguage + ".resx");
+                var lanText = Localization.GetString("RichText", this.LocalResourceFile);
                 return !string.IsNullOrEmpty(lanText)?lanText: "RichText"; 
             }
         }
