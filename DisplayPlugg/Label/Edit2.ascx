@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Edit2.ascx.cs" Inherits="Plugghest.Modules.UserControl.DisplayPlugg.Label.Edit2" %>
+<asp:Panel ID="pnlLabelEdit2" runat="server" meta:resourcekey="pnlLabelEdit2Resource1"></asp:Panel>

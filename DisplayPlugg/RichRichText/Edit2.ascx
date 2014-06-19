@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Edit2.ascx.cs" Inherits="Plugghest.Modules.UserControl.DisplayPlugg.RichRichText.Edit2" %>
+<asp:Panel ID="pnlRichRichTextEdit2" runat="server" resourcekey="pnlRichRichTextEdit2Resource1"></asp:Panel>
