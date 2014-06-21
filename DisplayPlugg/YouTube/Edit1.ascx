@@ -2,7 +2,7 @@
 
   <script type="text/javascript">
       $(document).ready(function () {
-          if ($('<%=txtYouTube.ClientID %>').val().length > 5) {
+          if ($('#'+'<%=txtYouTube.ClientID %>').val().length > 5) {
               $('#btnGetYoutubeVideo').trigger('click');
           }
       });
