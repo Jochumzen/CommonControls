@@ -1,0 +1,32 @@
+﻿   .ui-autocomplete-category
+        {
+            border-bottom: 1px solid #ccc;
+            display: block;
+            line-height: 1.3em;
+            width: 100%;
+            height: auto;
+            text-transform: uppercase;
+            color: #999;
+            font-weight: bold;
+            padding: 20px 0 10px 5px;
+        }
+
+        .ui-autocomplete
+        {
+            padding: 0 10px 10px 10px;
+        }
+
+        .ui-state-focus
+        {
+            color: White!important;
+            background: none repeat scroll 0 0 #ff6600!important;
+            outline: none;
+        }
+
+        .ui-corner-all
+        {
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }

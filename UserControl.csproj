@@ -25,7 +25,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\bin\</OutputPath>
+    <OutputPath>..\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -39,13 +39,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetNuke, Version=7.0.2.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="DotNetNuke, Version=7.3.0.499, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\DotNetNuke.dll</HintPath>
+      <HintPath>C:\dnndev.me\bin\DotNetNuke.dll</HintPath>
     </Reference>
     <Reference Include="DotNetNuke.WebUtility, Version=4.2.1.783, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\DotNetNuke.WebUtility.dll</HintPath>
+      <HintPath>C:\dnndev.me\bin\DotNetNuke.WebUtility.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -246,6 +246,12 @@
     <Compile Include="DisplayPlugg\YouTube\Edit1View.ascx.designer.cs">
       <DependentUpon>Edit1View.ascx</DependentUpon>
     </Compile>
+    <Compile Include="javascriptCustomControls\CustomAutocomplete.ascx.cs">
+      <DependentUpon>CustomAutocomplete.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="javascriptCustomControls\CustomAutocomplete.ascx.designer.cs">
+      <DependentUpon>CustomAutocomplete.ascx</DependentUpon>
+    </Compile>
     <Compile Include="USerControlModuleBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -310,6 +316,9 @@
     <Content Include="Documentation\Documentation.css" />
     <Content Include="Documentation\Documentation.html" />
     <Content Include="Edit.ascx" />
+    <Content Include="javascriptCustomControls\CSS\CategoryAutocomplete.css" />
+    <Content Include="javascriptCustomControls\CustomAutocomplete.ascx" />
+    <Content Include="javascriptCustomControls\Scripts\CategoryAutoComplete.js" />
     <Content Include="License.txt" />
     <Content Include="module.css" />
     <Content Include="ReleaseNotes.txt" />
@@ -449,9 +458,8 @@
           <UseIIS>True</UseIIS>
           <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
-          <DevelopmentServerVPath>
-          </DevelopmentServerVPath>
-          <IISUrl>http://dnndev.me/desktopmodules/USerControl</IISUrl>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://dnndev.me/CommonControls</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
           <IISAppRootUrl>http://dnndev.me</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
